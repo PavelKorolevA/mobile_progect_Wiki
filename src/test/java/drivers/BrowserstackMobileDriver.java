@@ -26,8 +26,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         String app = Credentials.config.app();
 
         // Установите свои учетные данные для доступа
-        caps.setCapability("browserstack.user", user);
-        caps.setCapability("browserstack.key", key);
+        caps.setCapability("user", user);
+        caps.setCapability("key", key);
 
         // Установить URL-адрес тестируемого приложения
         caps.setCapability("app", app);
