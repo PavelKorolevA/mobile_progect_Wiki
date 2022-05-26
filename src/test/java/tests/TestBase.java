@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static io.restassured.RestAssured.sessionId;
 import static org.openqa.selenium.remote.HttpSessionId.getSessionId;
 
 public class TestBase {
@@ -18,7 +19,6 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
         Configuration.browser = BrowserstackMobileDriver.class.getName();
-//        Configuration.startMaximized = false;
         Configuration.browserSize = null;
     }
 
@@ -29,12 +29,12 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-        String sessionId = getSessionId("");
+        String sessionId = Attach.getSessionId();
 
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
+        Attach.video(sessionId);
 
         closeWebDriver();
-        Attach.video(sessionId);
     }
 }
