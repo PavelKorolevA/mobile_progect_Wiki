@@ -23,3 +23,25 @@
 <p align="center">
 <img title="Jenkins Dashboard" src="images/screens/jenkins_dashboard.png">
 </p>  
+
+## :open_book: Allure отчет
+- ### Главный экран отчета
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_mainpage.png">
+</p>
+
+### Страница с проведенными тестами
+<p align="center">
+<img title="Allure Test Page" src="images/screenshots/allure_testspage.png">
+</p>
+
+## :robot: Отчет в Telegram
+<p align="center">
+<img title="Telegram notification message" src="images/screenshots/allure_telegram.png">
+</p>
+
+## :film_projector: Видео примеры прохождения тестов
+> К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+<p align="center">
+  <img title="Selenoid Video" src="images/gif/test.gif">
+</p>
