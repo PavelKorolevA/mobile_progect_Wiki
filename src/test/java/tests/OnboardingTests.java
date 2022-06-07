@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
 @Tag("selenide")
-public class WikipediaTests extends TestBase{
+public class OnboardingTests extends TestBase{
     @Test
     @DisplayName("Тест на проверку четырех шагов адаптации")
     void onboardingStepsTest() {
